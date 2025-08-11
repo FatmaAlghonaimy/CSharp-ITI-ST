@@ -38,5 +38,7 @@ The demo covers:
    - Ternary (`?:`)
    - Operator precedence
 6. **Console in/out + basic Parsing**
-5. **Errors**
+7. **Errors**
    - Syntax errors
+   - Logical errors
+   - Exceptions
