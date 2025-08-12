@@ -1,4 +1,4 @@
-# Day 1 Demo - C# Fundamentals (G03)
+# Day 1 Demo
 
 ## 📌 Overview
 This repository contains the **Day 1 Demo** for the G03 C# course.  
