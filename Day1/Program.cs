@@ -1,26 +1,25 @@
-﻿//using Day1G03.A;
-//using Day1G03.B;
-//using Test0A = Day1G03.A.Test;
+﻿//using Day1.A;
+//using Day1.B;
+//using Test0A = Day1.A.Test;
 //using System;
-using System.Runtime.Intrinsics.X86;
 
-namespace Day1G03
+namespace Day1
 {
-    // struct -enum -class-interface
-    // msh lazm yb2a esmo program.cs lakn hya naming convention
-    class Program
+    /// <summary>
+    /// The main class for any application.
+    /// msh lazm yb2a esmo program.cs lakn hya naming convention
+    /// </summary>
+    class Program //PascalCase
     {
-        //PascalCase
-        //camelCase
-        //jitting from here 
         /// <summary>
         /// Main entry point for the application.
         /// clr looks for a function with this signature 
+        /// jitting from here 
         /// </summary>
         static void Main()
         {
             #region namespace
-            ////Day1G03.A.Test
+            ////Day1.A.Test
             ////Test0A
             //Test  
             // from the new versions of .net we have global imports .net 6
@@ -61,7 +60,7 @@ namespace Day1G03
             #endregion
 
             #region variables and Consts
-            // Variables
+            // Variables  //camelCase
             //int age; // Declaration
             //age = 30; // Initialization
 
@@ -197,36 +196,36 @@ namespace Day1G03
 
             #region Operators Priority and Associativity
 
-            int a = 20;
-            int b = 15;
-            int c = 10;
-            int d = 5;
-            int Result;
-             
-            Result = (a + b) * c / d; // ( 20 + 15 ) * 10 / 5 = 70  
-            Result = ((a + b) * c) / d; // (( 20 + 15 ) * 10 ) / 5 = 70
-            Result = (a + b) * (c / d); // ( 20 + 15 ) * ( 10 / 5 ) = 70
-            Result = a + (b * c) / d; // 20 + ( 15 * 10 ) / 5 = 50
+            //int a = 20;
+            //int b = 15;
+            //int c = 10;
+            //int d = 5;
+            //int Result;
+
+            //Result = (a + b) * c / d; // ( 20 + 15 ) * 10 / 5 = 70  
+            //Result = ((a + b) * c) / d; // (( 20 + 15 ) * 10 ) / 5 = 70
+            //Result = (a + b) * (c / d); // ( 20 + 15 ) * ( 10 / 5 ) = 70
+            //Result = a + (b * c) / d; // 20 + ( 15 * 10 ) / 5 = 50
 
             #endregion
             #endregion
 
             #region  Console in/out + basic Parsing
-            Console.WriteLine("Enter your name: ");
+            //Console.WriteLine("Enter your name: ");
 
-            string name = Console.ReadLine(); // Wait for user input before closing the console window
+            //string name = Console.ReadLine(); // Wait for user input before closing the console window
 
-            Console.WriteLine("Hello, " + name + "!");
+            //Console.WriteLine("Hello, " + name + "!");
 
-            Console.Write("Enter your age: ");
+            //Console.Write("Enter your age: ");
 
-            string ageInput = Console.ReadLine(); // Read user input as a string  
-            int result = Console.Read(); // Read a single character from the console (not used here, but can be useful for other purposes)
+            //string ageInput = Console.ReadLine(); // Read user input as a string  
+            //int result = Console.Read(); // Read a single character from the console (not used here, but can be useful for other purposes)
 
 
-            //Parsing 
-            int age = int.Parse(ageInput); // Convert the string input to an integer
-            Console.WriteLine(age);
+            ////Parsing 
+            //int age = int.Parse(ageInput); // Convert the string input to an integer
+            //Console.WriteLine(age);
 
             //Console.Write("Ahmed");
             //Console.WriteLine("Ali");
@@ -234,7 +233,6 @@ namespace Day1G03
 
             //Read Readlint
             #endregion
-
         }
 
         #region Documentation and Comments
@@ -259,10 +257,13 @@ namespace Day1G03
         }
         #endregion
 
+        #region Debugging
+
         static void Test2()
         {
             Console.WriteLine("Hello from Test2");
         }
+        #endregion
     }
     #region Stanalone Functions
     //standalone function --invalid

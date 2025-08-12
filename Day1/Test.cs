@@ -1,10 +1,10 @@
-﻿namespace Day1G03.A
+﻿namespace Day1.A
 {
     class Test
     {
     }
 }
-namespace Day1G03.B
+namespace Day1.B
 {
     class Test
     {
