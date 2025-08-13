@@ -176,13 +176,13 @@ namespace Day1
             //Console.WriteLine(true | false); // True 
             //Console.WriteLine(false ^ true); // True 
 
-            //int X = 5, Y = 3; // X = 0101 , Y = 0011
+            int X = 5, Y = 3; // X = 0101 , Y = 0011
             //Console.WriteLine(X & Y);  // 1 (0101 & 0011 = 0001)
             //Console.WriteLine(X | Y);  // 7 (0101 | 0011 = 0111)
             //Console.WriteLine(X ^ Y);  // 6 (0101 ^ 0011 = 0110)
             //Console.WriteLine(~X);     // -6 (complement of 0101 is 1010) 
-            //Console.WriteLine(X << 1); // 10 (1010)  
-            //Console.WriteLine(X >> 1); // 2  (0010)
+            //Console.WriteLine(X << 2); // 10 (1010)    1010 = 10  // *2 *2   1010  10100 = 20
+            //Console.WriteLine(X >> 2); // 2  (0010)   0101   = 0010 = 2  /2  1 /2
             #endregion
 
             #region Terany Operator [Conditional Operator] [?:]
