@@ -1,6 +1,5 @@
 ﻿
 using System.Drawing;
-
 using Common;
 using Day4OOP.Encapsulation;
 using Day4OOP.Enums;
@@ -11,7 +10,7 @@ namespace Day4OOP
         static void Main(string[] args)
         {
             #region Class Library
-            //Class1 class1 = new Class1();
+            Class1 class1 = new Class1();
             #endregion
 
             #region Access Modifiers [Private - Internal - Public]
