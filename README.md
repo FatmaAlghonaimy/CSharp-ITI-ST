@@ -1,14 +1,15 @@
-# 📚 Day 1 & Day 2 Demo
+# 📚 Day 1, Day 2 & Day 3 Demo
 
 ## 📌 Overview
-This repository contains the demos for the **ITI Summer Training C# course .NET Tracks**.   C# Part
-It is designed to introduce **absolute beginners** to the basic concepts of C# programming, the .NET environment, and console-based input/output, gradually progressing to **type conversion, nullable types, conditional statements, switch enhancements, and loops**.
+This repository contains the demos for the **ITI Summer Training C# course .NET Tracks — C# Part**.  
+It is designed to introduce **absolute beginners** to the basic concepts of C# programming, the .NET environment, and console-based input/output,
+then gradually progress to **type conversion, nullable types, conditional statements, loops, arrays, strings, StringBuilder, parameter passing techniques, and more**.
 
 ---
 
 ## 🛠 Topics Covered
 
-### **Day 1**
+### 📅 **Day 1**
 1. **C# Program Structure**
    - `namespace`, `class`, and `Main` method
 
@@ -40,7 +41,7 @@ It is designed to introduce **absolute beginners** to the basic concepts of C# p
 
 ---
 
-### **Day 2**
+### 📅 **Day 2**
 1. **Fractions & Numeric Precision**
    - `float`, `double`, `decimal` differences
    - Precision limits and usage
@@ -90,6 +91,46 @@ It is designed to introduce **absolute beginners** to the basic concepts of C# p
 
 ---
 
+### 📅 **Day 3**
+1. **Methods**
+   - PascalCase naming convention  
+   - **Static methods** (class-level) vs **Instance methods** (object-level)
+   - Method overloading
+   - **Optional parameters** & named arguments
+   - Checking for `null` in array/reference type parameters
+
+2. **Parameter Passing Techniques**
+   - **Pass by Value** (default)
+   - **Pass by Reference** (`ref`)
+   - **Output parameters** (`out`)
+   - **Parameter arrays** (`params`) — C# 13 improvements with `ReadOnlySpan<T>`
+   - Real differences in modifying arrays with `ref` vs without
+
+3. **Arrays**
+   - **1D Arrays** — creation, initialization, access, `Length` and `Rank`
+   - **2D Arrays** (Rectangular) — `GetLength()`, nested loops for row/column traversal
+   - **Jagged Arrays** — array of arrays, different lengths per row
+   - **Array Class Methods**
+     - `Sort`, `Reverse`, `Clear`, `Resize`
+     - `Copy`, `ConstrainedCopy`
+
+4. **Strings**
+   - String immutability & string pool
+   - Common methods: `Length`, `ToUpper`, `ToLower`, `Trim`, `Substring`, `Replace`, `Contains`, `IndexOf`
+
+5. **StringBuilder**
+   - Mutable string operations
+   - Methods: `Append`, `AppendLine`, `AppendFormat`, `AppendJoin`, `Replace`, `Remove`, `Clear`
+   - Performance benefits over string concatenation
+
+6. **Boxing & Unboxing**
+   - **Boxing**: value type → reference type (e.g., `object obj = 10;`)
+   - **Unboxing**: reference type → value type (requires explicit cast)
+   - Safe vs unsafe casting, `InvalidCastException`
+
+---
+
 ## 📂 Structure
-- **Day1** → Covers basic syntax, variables, operators, and I/O.  
-- **Day2** → Builds on Day 1 by introducing data conversion, nullable types, advanced conditionals, and loops.
+- **Day1** → Basics: syntax, variables, operators, and I/O  
+- **Day2** → Data conversion, nullable types, advanced conditionals, and loops  
+- **Day3** → Methods, parameter passing, arrays, strings, StringBuilder, boxing/unboxing
