@@ -9,7 +9,7 @@ then gradually progress to:
 - **Day 3** → Methods (static vs instance), parameter passing techniques (`ref`, `out`, `in`, `params`), arrays (1D, 2D, jagged), strings, `StringBuilder`, and boxing/unboxing.  
 - **Day 4** → Access modifiers, structs in detail, encapsulation (properties, indexers), working with `System.Object` methods (`ToString`, `Equals`, `GetHashCode`, `GetType`), and enums.  
 
---
+---
 
 ## 🛠 Topics Covered
 
@@ -169,7 +169,8 @@ then gradually progress to:
    - Example: `Gender` enum with values (e.g., `Male`, `Female`)
    - Casting between enum values and integers
    - Used in `Employee` class for gender property
---
+     
+---
  
 ## 📂 Structure
 The repository is organized into the following folders:
