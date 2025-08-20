@@ -1,9 +1,13 @@
-# 📚 Day 1, Day 2 & Day 3 Demo
+# 📚 Day 1, Day 2, Day 3 & Day 4 Demo
 
 ## 📌 Overview
 This repository contains the demos for the **ITI Summer Training C# course .NET Tracks — C# Part**.  
-It is designed to introduce **absolute beginners** to the basic concepts of C# programming, the .NET environment, and console-based input/output,
-then gradually progress to **type conversion, nullable types, conditional statements, loops, arrays, strings, StringBuilder, parameter passing techniques, and more**.
+It is designed to introduce **beginners** to the basic concepts of C# programming, the .NET environment, and console-based input/output,  
+then gradually progress to:
+
+- **Day 1–2** → User-defined data types, enums, flagged enums, structs, type conversion, nullable types, and conditional statements/loops.  
+- **Day 3** → Methods (static vs instance), parameter passing techniques (`ref`, `out`, `in`, `params`), arrays (1D, 2D, jagged), strings, `StringBuilder`, and boxing/unboxing.  
+- **Day 4** → Access modifiers, structs in detail, encapsulation (properties, indexers), working with `System.Object` methods (`ToString`, `Equals`, `GetHashCode`, `GetType`), and enums.  
 
 ---
 
@@ -129,8 +133,51 @@ then gradually progress to **type conversion, nullable types, conditional statem
    - Safe vs unsafe casting, `InvalidCastException`
 
 ---
+### 📅 **Day 4**
 
+1. **Access Modifiers**
+   - **Private** → accessible only within the same class
+   - **Internal** → accessible within the same project/assembly
+   - **Public** → accessible from anywhere (same project or outside project)
+   - Demo with class fields (`x`, `y`, `z`) showing scope differences  
+
+2. **Structs**
+   - Value types stored on the **stack**
+   - **Constructor overloading** (default, parameterized, single parameter)
+   - **Copy behavior** → structs create *independent copies* (no shared reference like classes)
+   - Example: `Point` struct with multiple constructors and assignments  
+
+3. **Encapsulation**
+   - **Fields with getters/setters** → protect data from direct modification
+   - **Properties** → improved readability, validation, and controlled access  
+   - **Read-only / Write-only properties**
+   - **Indexers** → access data by key/index (like an array or dictionary)  
+   - Examples:
+     - `Employee` class → `Id`, `Name`, `Age` with encapsulation
+     - `PhoneNoteBook` class → indexer for names & phone numbers  
+
+4. **System.Object Methods**
+   Every class/struct in C# inherits from `System.Object`. Key methods:
+   - `ToString()` → string representation (can override)
+   - `Equals()` → value vs reference equality
+   - `GetHashCode()` → generates hash for collections/lookup
+   - `GetType()` → runtime type info  
+   - Demo includes **static vs dynamic binding**, boxing/unboxing with `object`  
+
+5. **Enums**
+   - Strongly typed constants for readability & maintainability
+   - Example: `Gender` enum with values (e.g., `Male`, `Female`)
+   - Casting between enum values and integers
+   - Used in `Employee` class for gender property
+     
+---
+ 
 ## 📂 Structure
-- **Day1** → Basics: syntax, variables, operators, and I/O  
-- **Day2** → Data conversion, nullable types, advanced conditionals, and loops  
-- **Day3** → Methods, parameter passing, arrays, strings, StringBuilder, boxing/unboxing
+The repository is organized into the following folders:
+
+- **CSharpBasics/** →
+-  **Day1** → Basics: syntax, variables, operators, and I/O  
+-  **Day2** → Data conversion, nullable types, advanced conditionals, and loops  
+-  **Day3** → Methods, parameter passing, arrays, strings, StringBuilder, boxing/unboxing
+- **OOPAndMore/** → Day 4 and beyond (structs, encapsulation, enums, objects, OOP topics)  
+- **Common/** → Shared Class Library used across demos  
