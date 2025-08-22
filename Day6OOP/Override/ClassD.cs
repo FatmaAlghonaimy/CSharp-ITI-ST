@@ -15,12 +15,12 @@ namespace Day6OOP.Override
         }
         public new void MyFun01()
         {
-            Console.WriteLine("This is MyFun01 and Im Child (ClassD)");
+            Console.WriteLine("This is MyFun01 from (ClassD)");
         }
         public override void MyFun02() //try new
         {
             base.MyFun02();
-            Console.WriteLine($"D:{D}");
+            Console.Write($" D:{D}");
         }
     }
 }

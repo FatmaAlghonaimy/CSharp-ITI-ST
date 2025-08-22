@@ -16,11 +16,11 @@ namespace Day6OOP.Override
 
         public void MyFun01()
         {
-            Console.WriteLine("This is MyFun01 and Im Base (ClassA)");
+            Console.WriteLine("This is MyFun01 From (ClassA)");
         }
         public virtual void MyFun02() //abstract aw override aw virtual
         {
-            Console.WriteLine($"This is MyFun02 and A :{A}");
+            Console.Write($"This is MyFun02 and A:{A}");
         }
 
     }

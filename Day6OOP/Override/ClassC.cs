@@ -16,12 +16,12 @@ namespace Day6OOP.Override
         //Static Polymorphism
         public new void MyFun01() 
         {
-            Console.WriteLine("This is MyFun01 and Im Child (ClassC)");
+            Console.WriteLine("This is MyFun01 from (ClassC)");
         }
         public new virtual void MyFun02() //old one ++  // new method
         {
             base.MyFun02();
-            Console.WriteLine($"C:{C}");
+            Console.Write($" C:{C}");
         } // new level of virtuality 
     }
 }

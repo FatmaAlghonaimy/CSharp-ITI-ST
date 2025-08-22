@@ -58,16 +58,13 @@ namespace Day6OOP
         {
 
             #region Polymorphism - Overriding 
-
-
             //ClassA classA = new ClassA(10);
-            //classA.MyFun01();
+            //classA.MyFun01();   
             //classA.MyFun02();
 
             //ClassB classB = new ClassB(10, 20);
             //classB.MyFun01(); 
             //classB.MyFun02();
-
 
             #endregion
 
@@ -81,102 +78,120 @@ namespace Day6OOP
 
             #endregion
 
-            #region Simple Example
+            #region Example 
 
-            //ClassA classA = new ClassB(10,20);
-            //classA.A = 1;
-            ////classA.B;
-            //classA.MyFun01();
-            //classA.MyFun02();
-            #endregion
-
-            #region Example 2
-
+            #region Reference From D
             //ClassD classD = new ClassD(10, 10, 20, 20);
             //classD.A = 10;
             //classD.B = 20;
             //classD.C = 20;
             //classD.D = 20;
 
-            //classD.MyFun01();
-            //classD.MyFun02();
+            ////version of d
+            //classD.MyFun01(); //This is MyFun01 from (ClassD)
+            //classD.MyFun02(); //This is MyFun02 and A:10 B: 20 C: 20 D: 20
+            #endregion
 
+            #region Reference From C
+
+            #region object of ClassC
             //ClassC classC = new ClassC(10, 20, 30);
             //classC.A = 10;
             //classC.B = 20;
             //classC.C = 30;
 
-            //classC.MyFun01();
-            //classC.MyFun02();
+            //classC.MyFun01(); //This is MyFun01 from (ClassC)
+            //classC.MyFun02(); //This is MyFun02 and A:10 B: 20 C: 30
+            #endregion
 
+            #region object of ClassD
             //ClassC classC = new ClassD(10, 20, 30, 40);
             //classC.A = 10;
             //classC.B = 20;
             //classC.C = 30;
-            ////classC.D 
+            ////classC.D  //invalid -- D is not a member of ClassC
 
-            //classC.MyFun01();
-            //classC.MyFun02();
+            //classC.MyFun01(); //This is MyFun01 from (ClassC) -- new method hides the base method
+            //classC.MyFun02(); //This is MyFun02 and A:10 B: 20 C: 30 D: 40 // virtual method? get me the latest override based on object type
+            #endregion
+            #endregion
 
+            #region Reference From B
+            #region object of ClassB
             //ClassB classB01 = new ClassB(10, 20);
-            //ClassB classB02 = new ClassC(10, 20, 30);
-            //ClassB classB03 = new ClassD(10, 20, 30,40);
-
 
             //classB01.A = 10;
             //classB01.B = 20;
+            //// class b versions
+            //classB01.MyFun01(); // This is MyFun01 from (ClassB)
+            //classB01.MyFun02(); // This is MyFun02 and A:10 B: 20
+            #endregion
 
-            //classB01.MyFun01();
-            //classB01.MyFun02();
-
+            #region object of ClassC
+            //ClassB classB02 = new ClassC(10, 20, 30);
             //classB02.A = 10;
             //classB02.B = 20;
+            ////classB02.C //invalid // C is not a member of ClassB
+            //classB02.MyFun01(); //This is MyFun01 from (ClassB)
+            //classB02.MyFun02(); //This is MyFun02 and A:10 B: 20 -- my func02 in c is new virtual, so we get the latest overriden version which is b
+            #endregion
 
-            //classB02.MyFun01();
-            //classB02.MyFun02();
-
+            #region object of ClassD
+            //ClassB classB03 = new ClassD(10, 20, 30, 40);
             //classB03.A = 10;
             //classB03.B = 20;
-            ////classB02.c = 20;
+            ////classB02.c = 20; //invalid // C is not a member of ClassB
+            ////classB02.d = 20; //invalid // D is not a member of ClassB
 
+            //classB03.MyFun01(); // This is MyFun01 from (ClassB) -- early binding, static polymorphism, compiler time
+            //classB03.MyFun02(); // This is MyFun02 and A:10 B: 20 -- late binding, dynamic polymorphism, runtime
+            ////-- my func02 in c is new virtual, so we get the latest overriden version before the new which is b
+            ////if it wac overriden we get the latest version of the override which is d
+            #endregion
+            #endregion
 
-            //classB03.MyFun01();
-            //classB03.MyFun02();
+            #region Reference From A
 
+            #region object of ClassA
             //ClassA classA01 = new ClassA(10);
-            //ClassA classA02 = new ClassB(10,20);
-            //ClassA classA03 = new ClassC(10,20,30);
-            // ClassA classA04 = new ClassD(10,20,30,40);
+            //classA01.A = 10; 
 
+            ////class A versions
+            //classA01.MyFun01(); // This is MyFun01 From (ClassA) 
+            //classA01.MyFun02(); // This is MyFun02 and A:10 
+            #endregion
 
-            //classA01.A = 10;
-            //classA02.B =10;
-            //classA03.C =10;
-
-            //classA01.MyFun01();
-            //classA01.MyFun02();
-
+            #region object of ClassB
+            //ClassA classA02 = new ClassB(10, 20);
             //classA02.A = 10;
-            ////classA02.B =10;
-            ////classA03.C =10;
+            ////classA02.B = 20; //invalid -- B is not a member of ClassA
+            //classA02.MyFun01(); // This is MyFun01 from (ClassA) // gets based on refernce type
+            //classA02.MyFun02(); // This is MyFun02 and A:10 B:20 -- late binding, dynamic polymorphism, runtime
+            #endregion
 
-            //classA02.MyFun01();
-            //classA02.MyFun02();
-
+            #region object of ClassC
+            //ClassA classA03 = new ClassC(10, 20, 30);
             //classA03.A = 10;
-            ////classA03.B = 10;
-            ////classA03.C = 10;
+            ////classA03.B = 20; //invalid -- B is not a member of ClassA
+            ////classA03.C = 30; //invalid -- C is not a member of ClassA
+            //classA03.MyFun01(); //This is MyFun01 from (ClassA) // gets based on refernce type
+            //classA03.MyFun02(); // This is MyFun02 and A:10 B: 20 -- c is new virtual, so we get the latest overriden version which is b
+            ////if it was overriden we get the latest version of the override which is c
+            #endregion
 
-            //classA03.MyFun01(); // new , data hiding , static polymorphism, compiler
-            //classA03.MyFun02(); // virtual , dynamic , runtime
-
+            #region object of ClassD
+            //ClassA classA04 = new ClassD(10, 20, 30, 40);
             //classA04.A = 10;
-            //classA03.B = 10;
-            //classA03.C = 10;
+            ////classA04.B = 20; //invalid -- B is not a member of ClassA
+            ////classA04.C = 30; //invalid -- C is not a member of ClassA
+            ////classA04.D = 40; //invalid -- D is not a member of ClassA
 
-            //classA04.MyFun01(); // new , data hiding , static polymorphism, compiler
-            //classA04.MyFun02(); // virtual , dynamic , runtime
+            //classA04.MyFun01(); // This is MyFun01 From (ClassA)
+            //classA04.MyFun02(); // This is MyFun02 and A:10 B: 200 // -- c is new virtual, so we get the latest overriden version which is b
+            ////if it was overriden we get the latest version of the override which is d
+            #endregion
 
+            #endregion
 
             #endregion
             #endregion

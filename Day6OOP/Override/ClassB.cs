@@ -17,12 +17,12 @@ namespace Day6OOP.Override
         // Using Keyword New To Hide Inherited Member TypeA.MyFun01 [Masking - Shadowing - New Version]	
         public new void MyFun01()  // new one 
         {
-            Console.WriteLine("This is MyFun01 and Im Child (ClassB)");
+            Console.WriteLine("This is MyFun01 from (ClassB)");
         }
         public override void MyFun02() //old one ++
         {
             base.MyFun02();  //can use base. as long as i inherited no matter what type of polymorohism
-            Console.WriteLine($"B:{B}");
+            Console.Write($" B:{B}");
         }
     }
 }
