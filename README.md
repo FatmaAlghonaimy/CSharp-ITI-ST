@@ -1,4 +1,4 @@
-# 📚 Day 1, Day 2, Day 3 & Day 4 Demo
+# 📚 Day 1, Day 2, Day 3, Day 4 & Day 5 Demo
 
 ## 📌 Overview
 This repository contains the demos for the **ITI Summer Training C# course .NET Tracks — C# Part**.  
@@ -8,6 +8,7 @@ then gradually progress to:
 - **Day 1–2** → User-defined data types, enums, flagged enums, structs, type conversion, nullable types, and conditional statements/loops.  
 - **Day 3** → Methods (static vs instance), parameter passing techniques (`ref`, `out`, `in`, `params`), arrays (1D, 2D, jagged), strings, `StringBuilder`, and boxing/unboxing.  
 - **Day 4** → Access modifiers, structs in detail, encapsulation (properties, indexers), working with `System.Object` methods (`ToString`, `Equals`, `GetHashCode`, `GetType`), and enums.  
+- **Day 5** → Advanced enums, permissions with flagged enums, classes and constructor overloading, inheritance & upcasting, access modifiers across assemblies, method overloading, and operator overloading (binary, unary, relational, casting).  
 
 ---
 
@@ -133,8 +134,8 @@ then gradually progress to:
    - Safe vs unsafe casting, `InvalidCastException`
 
 ---
-### 📅 **Day 4**
 
+### 📅 **Day 4**
 1. **Access Modifiers**
    - **Private** → accessible only within the same class
    - **Internal** → accessible within the same project/assembly
@@ -169,15 +170,61 @@ then gradually progress to:
    - Example: `Gender` enum with values (e.g., `Male`, `Female`)
    - Casting between enum values and integers
    - Used in `Employee` class for gender property
-     
+
 ---
- 
+
+### 📅 **Day 5**
+1. **Enums (Advanced)**
+   - Using `Enum.TryParse()` for safe user input parsing  
+   - Branch enum example (HR, IT, Finance, Marketing)  
+   - **Flagged Enums for Permissions** (`[Flags]`)  
+     - Assigning multiple permissions (`Read | Write | Update | Delete`)  
+     - Adding/removing permissions using `|`, `&`, `^` operators  
+     - Checking if a user has a specific permission  
+
+2. **Classes**
+   - Creating objects on the heap  
+   - Constructor overloading and **constructor chaining**  
+   - Example: `Car` class with multiple constructors (`id`, `brand`, `speed`)  
+
+3. **Inheritance**
+   - Base class (`Parent`) and derived class (`Child`)  
+   - Upcasting (`Parent p = new Child()`)  
+   - Overriding methods vs inherited behavior  
+   - Example: calculating product using base and child members  
+
+4. **Access Modifiers (continued from Day 4)**  
+   - Deep dive into accessibility across **different assemblies**  
+   - Behavior of:
+     - `private`, `internal`, `public`  
+     - `protected`, `private protected`, `protected internal`  
+   - Demo with `TypeA`, `TypeB`, and `TypeD` classes  
+
+5. **Method Overloading**
+   - Multiple `Sum` method variations with different signatures  
+   - Overloading not allowed by **return type only**  
+   - Example with `int`, `double`, and mixed parameters  
+
+6. **Operator Overloading**
+   - **Binary Operators** (`+`, `-`) → e.g., `Complex` numbers addition/subtraction  
+   - **Unary Operators** (`++`, `--`) → prefix vs postfix  
+   - **Relational Operators** (`>`, `<`, `==`, `!=`) → comparing custom objects  
+   - **Casting Operators**  
+     - Explicit: `(int)Complex`  
+     - Implicit/explicit: `(string)Complex` → `"2 + 3i"`  
+   - **User-defined type casting** (mapping `User` → `UserViewModel`)  
+     - Example for manual mapping, and hinting at **AutoMapper** for automation  
+
+---
+
 ## 📂 Structure
 The repository is organized into the following folders:
 
 - **CSharpBasics/** →
--  **Day1** → Basics: syntax, variables, operators, and I/O  
--  **Day2** → Data conversion, nullable types, advanced conditionals, and loops  
--  **Day3** → Methods, parameter passing, arrays, strings, StringBuilder, boxing/unboxing
-- **OOPAndMore/** → Day 4 and beyond (structs, encapsulation, enums, objects, OOP topics)  
+  - **Day1** → Basics: syntax, variables, operators, and I/O  
+  - **Day2** → Data conversion, nullable types, advanced conditionals, and loops  
+  - **Day3** → Methods, parameter passing, arrays, strings, StringBuilder, boxing/unboxing  
+- **OOPAndMore/** →  
+  - **Day4** → Structs, encapsulation, enums, objects, OOP topics  
+  - **Day5** → Advanced enums, permissions, classes, inheritance, access modifiers, method & operator overloading  
 - **Common/** → Shared Class Library used across demos  
