@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -8,7 +9,7 @@ using System.Xml.Linq;
 
 namespace Day4OOP.Encapsulation
 {
-    internal struct PhoneNoteBook
+    internal struct PhoneNoteBook : IEnumerable
     {
         #region Attributes -- Properties
         public string[]? Names { get; set;} //private name
@@ -26,8 +27,8 @@ namespace Day4OOP.Encapsulation
         }
         public PhoneNoteBook(int size)
         {
-            Names = new string[Size];
-            Numbers = new int[Size];
+            Names = new string[size];
+            Numbers = new int[size];
             Size = size;
         }
         #endregion
@@ -151,6 +152,24 @@ namespace Day4OOP.Encapsulation
         //    {
         //        return "position: " + index + ", name: " + Names[index] + ", number: " + Numbers[index];
         //    }
+        //}
+        #endregion
+
+        #region IEnumerable Implementation
+        public IEnumerator GetEnumerator()
+        {
+            if (Names is not null && Numbers is not null)
+            {
+                for (int i = 0; i < Size; i++)
+                {
+                    yield return $"Name: {Names[i]}, Number: {Numbers[i]}";
+                }
+            }
+        }
+
+        //public IEnumerator GetEnumerator()
+        //{
+        //    throw new NotImplementedException();
         //}
         #endregion
     }

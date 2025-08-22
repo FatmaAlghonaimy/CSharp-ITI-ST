@@ -87,19 +87,19 @@ namespace Day4OOP
             #region Example 02
 
             //PhoneNoteBook note01;
-            //note01 = new (new string[] { "Ali", "Ahmed" }, new int[] { 123, 456 }, 2);
+            //note01 = new(new string[] { "Ali", "Ahmed" }, new int[] { 123, 456 }, 2);
 
             //PhoneNoteBook note02 = new PhoneNoteBook(2); //create phone note book with size 5
             //note02.AdddPerson(0, "Ali", 1234567890);
             //note02.AdddPerson(1, "Ahmed", 987654310);
             //note02.AdddPerson(2, "Mohamed", 1234567890); //invalid, index out of range
 
-            //Console.WriteLine($"Name: {note02.names[0]}, Number: {note02.numbers[0]}"); // Name: Ali, Number: 1234567890
-            //Console.WriteLine($"Name: {note02.names[1]}, Number: {note02.numbers[1]}"); // Name: Ahmed, Number: 987654310
-            //                                                                            //Console.WriteLine($"Name: {note02.names[2]}, Number: {note02.numbers[2]}"); //invalid, index out of range
+            //Console.WriteLine($"Name: {note02.Names?[0]}, Number: {note02.Numbers?[0]}"); // Name: Ali, Number: 1234567890
+            //Console.WriteLine($"Name: {note02.Names?[1]}, Number: {note02.Numbers?[1]}"); // Name: Ahmed, Number: 987654310
+            //Console.WriteLine($"Name: {note02.names[2]}, Number: {note02.numbers[2]}"); //invalid, index out of range
 
-            ///Ali ===> number
-            ///number ===> ALi
+            // Ali ===> number
+            // number ===> ALi
 
 
             //Console.WriteLine($"Number of Ali: {note02.GetNumber("Ali")}"); // Number of Ali: 1234567890
@@ -111,9 +111,14 @@ namespace Day4OOP
 
             /// note02[222222] ====>  ahmed
             /// 
-            //for (int i = 0; i < notebook.Size; i++)
+            //for (int i = 0; i < note01.Size; i++)
             //{
-            //	Console.WriteLine(notebook[i]);
+            //    Console.WriteLine(note01[i]);
+            //}
+
+            //foreach (var item in note01) //get enumenator, get cuurent, move next, dispose
+            //{
+            //    Console.WriteLine(item);
             //}
             #endregion
 
