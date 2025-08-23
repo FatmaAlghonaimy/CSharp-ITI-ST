@@ -1,16 +1,16 @@
-# 📚 Day 1, Day 2, Day 3, Day 4 & Day 5 Demo
+# 📚 Day 1, Day 2, Day 3, Day 4, Day 5 & Day 6 Demo
 
 ## 📌 Overview
-This repository contains the demos for the **ITI Summer Training C# course .NET Tracks — C# Part**.  
-It is designed to introduce **beginners** to the basic concepts of C# programming, the .NET environment, and console-based input/output,  
-then gradually progress to:
+This repository contains demos from the **ITI Summer Training C# course (.NET Track — C# Part)**.  
+It covers the fundamentals of **C# programming** and progresses through topics like:
 
-- **Day 1–2** → User-defined data types, enums, flagged enums, structs, type conversion, nullable types, and conditional statements/loops.  
-- **Day 3** → Methods (static vs instance), parameter passing techniques (`ref`, `out`, `in`, `params`), arrays (1D, 2D, jagged), strings, `StringBuilder`, and boxing/unboxing.  
-- **Day 4** → Access modifiers, structs in detail, encapsulation (properties, indexers), working with `System.Object` methods (`ToString`, `Equals`, `GetHashCode`, `GetType`), and enums.  
-- **Day 5** → Advanced enums, permissions with flagged enums, classes and constructor overloading, inheritance & upcasting, access modifiers across assemblies, method overloading, and operator overloading (binary, unary, relational, casting).  
+- User-defined data types, enums, structs, and type conversion.  
+- Methods, arrays, strings, and memory management.  
+- Encapsulation, access modifiers, and working with `System.Object`.  
+- Classes, constructors, inheritance, and operator overloading.  
+- Abstraction, interfaces, binding, and overriding.  
 
----
+Each day introduces **progressively advanced OOP concepts** with practical examples.
 
 ## 🛠 Topics Covered
 
@@ -217,14 +217,40 @@ then gradually progress to:
 
 ---
 
-## 📂 Structure
-The repository is organized into the following folders:
+### 📅 **Day 6**
+1. **Abstraction**
+   - Abstract classes  
+   - Abstract vs non-abstract members  
+   - Abstract class inheritance  
 
-- **CSharpBasics/** →
-  - **Day1** → Basics: syntax, variables, operators, and I/O  
-  - **Day2** → Data conversion, nullable types, advanced conditionals, and loops  
-  - **Day3** → Methods, parameter passing, arrays, strings, StringBuilder, boxing/unboxing  
-- **OOPAndMore/** →  
-  - **Day4** → Structs, encapsulation, enums, objects, OOP topics  
-  - **Day5** → Advanced enums, permissions, classes, inheritance, access modifiers, method & operator overloading  
-- **Common/** → Shared Class Library used across demos  
+2. **Binding**
+   - Early binding (compile-time)  
+   - Late binding (runtime) with `virtual`/`override`  
+   - Dynamic binding using `dynamic`  
+
+3. **Interfaces**
+   - Defining & implementing interfaces  
+   - Multiple interface implementation  
+   - Interface segregation principle  
+   - Real-world use cases  
+
+4. **Override**
+   - Overriding base class methods  
+   - `virtual`, `override`, and `sealed override` keywords  
+   - Differences between hiding (`new`) and overriding (`override`)  
+
+---
+## 📂 Repository Structure
+
+📦 Solution  
+├── 📂 CSharpBasics  
+│   ├── 📚 Day1 → Basics: syntax, variables, operators, and I/O  
+│   ├── 📚 Day2 → Data conversion, nullable types, advanced conditionals, and loops  
+│   └── 📚 Day3 → Methods, parameter passing, arrays, strings, StringBuilder, boxing/unboxing  
+│  
+├── 📂 OOPAndMore  
+│   ├── 📚 Day4 → Structs, encapsulation, enums, objects, OOP topics  
+│   ├── 📚 Day5 → Advanced enums, permissions, classes, inheritance, access modifiers, method & operator overloading  
+│   └── 📚 Day6 → Abstraction, binding, interfaces, overriding  
+│  
+└── 📚 Common → Shared Class Library used across demos
