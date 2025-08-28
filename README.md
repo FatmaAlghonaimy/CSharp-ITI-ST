@@ -1,4 +1,4 @@
-# 📚 Day 1, Day 2, Day 3, Day 4, Day 5 & Day 6 Demo
+# 📚 Day 1, Day 2, Day 3, Day 4, Day 5, Day 6 & Day 7 Demo
 
 ## 📌 Overview
 This repository contains demos from the **ITI Summer Training C# course (.NET Track — C# Part)**.  
@@ -9,8 +9,11 @@ It covers the fundamentals of **C# programming** and progresses through topics l
 - Encapsulation, access modifiers, and working with `System.Object`.  
 - Classes, constructors, inheritance, and operator overloading.  
 - Abstraction, interfaces, binding, and overriding.  
+- Advanced OOP concepts: static/partial classes, operator overloading, and exception handling.  
 
 Each day introduces **progressively advanced OOP concepts** with practical examples.
+
+---
 
 ## 🛠 Topics Covered
 
@@ -240,6 +243,31 @@ Each day introduces **progressively advanced OOP concepts** with practical examp
    - Differences between hiding (`new`) and overriding (`override`)  
 
 ---
+
+### 📅 **Day 7**
+1. **Static Classes**
+   - Characteristics of `static` classes  
+   - Use cases for utility/helper methods  
+   - Limitations (cannot be instantiated, cannot have instance constructors)  
+
+2. **Partial Classes**
+   - Splitting a class across multiple files  
+   - Benefits for team collaboration and generated code (e.g., WinForms, EF models)  
+   - Rules and restrictions  
+
+3. **Operator Overloading (Advanced)**
+   - Deep dive into overloading arithmetic, relational, and logical operators  
+   - Best practices and limitations  
+
+4. **Exception Handling**
+   - `try`, `catch`, `finally` blocks  
+   - Throwing exceptions with `throw`  
+   - Creating custom exceptions  
+   - Exception hierarchy (`System.Exception`, `ApplicationException`)  
+   - Defensive coding and error handling best practices  
+
+---
+
 ## 📂 Repository Structure
 
 📦 Solution  
@@ -251,6 +279,8 @@ Each day introduces **progressively advanced OOP concepts** with practical examp
 ├── 📂 OOPAndMore  
 │   ├── 📚 Day4 → Structs, encapsulation, enums, objects, OOP topics  
 │   ├── 📚 Day5 → Advanced enums, permissions, classes, inheritance, access modifiers, method & operator overloading  
-│   └── 📚 Day6 → Abstraction, binding, interfaces, overriding  
+│   ├── 📚 Day6 → Abstraction, binding, interfaces, overriding  
+│   └── 📚 Day7 → Static classes, partial classes, advanced operator overloading, exception handling  
 │  
-└── 📚 Common → Shared Class Library used across demos
+├── 📚 Common → Shared Class Library used across demos   
+└── 📚 RepoDP → Class Library showing how Generics are used in Repository design pattern 
