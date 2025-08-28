@@ -12,6 +12,12 @@ namespace Day4OOP
         //{
         //    Console.WriteLine(item);
         //}
+        //public void Print(int message) { 
+        //    Console.WriteLine(message);
+        //}      
+        //public void Print(double message) { 
+        //    Console.WriteLine(message);
+        //} 
         public void Print(object item) //boxing 
         {
             Console.WriteLine(item);

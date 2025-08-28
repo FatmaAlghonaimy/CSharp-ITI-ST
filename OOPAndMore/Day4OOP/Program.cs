@@ -120,6 +120,18 @@ namespace Day4OOP
             //{
             //    Console.WriteLine(item);
             //}
+
+            //PhoneNotebook[] notebooks = new PhoneNotebook[3];
+            //foreach (var item in notebooks)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Point[] p1 = new Point[] {
+            //};
+            //foreach (var item in p1)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #endregion
@@ -152,22 +164,37 @@ namespace Day4OOP
 
             #region Equals()
             //value type 
-            //Point point1 = new Point() {x = 10 , y = 15 };
-            //Point point2 = new Point() {x = 10, y = 15 };
 
-            //shallow copy
-            //Console.WriteLine(point1.Equals(point2)); // True, because values are equal
+            //int x = 0;
+            //int y = 0;
+            //Console.WriteLine(x.Equals(y)); //x==y?  //values, stack , shallow equivalence
 
             //refernce 
+
+            //int[] arr = { 1, 2, 3 };
+            //int[] arr2 = { 1, 2, 3 };
+            //Console.WriteLine(arr.Equals(arr2)); //references, in stack
             //string name1 = "Fatma"; 
             //string name2 = "fatma";
             ////string name2 = "Ali"; //new instance
             //Console.WriteLine(name1.Equals(name2)); // False, because values are not equal
 
-
+            //user defined
+            //sallow equivalence
             //Point point1 = new Point() { x = 10, y = 15 };
             //Point point2 = new Point() { x = 10, y = 15 };
             //Console.WriteLine(point1.Equals(point2)); // True, because values are equal
+            ////refernce from parent, object from child, last override
+            //object obj1 = new Point(1, 2); //
+            ////Console.WriteLine(obj1.GetHashCode()); //the same behaviour , dynamic polymoriohism as value type
+
+            //object obj2 = new Point(1, 2); //override Equals of object , values
+            ////Console.WriteLine(obj2.GetHashCode());
+            //Console.WriteLine(obj1.Equals(obj2)); //True //override, dynamic polymprphism
+            ////values inside heap -- instances of objects
+
+            //obj2 = obj1; // only one object in heap-- shallow copy
+            //Console.WriteLine(obj2.Equals(obj1));
 
             #endregion
 
@@ -180,7 +207,7 @@ namespace Day4OOP
             //Point point1 = new Point() { x = 10, y = 15 };
             //Console.WriteLine(point1.GetHashCode()); // hash code of point1
 
-            //refernce        static dynamic binding
+            //refernce        static vs dynamic binding
             //object num1 = 123;  //boxing
             //Console.WriteLine(num1.GetHashCode()); // hash code of num1 123
             //object num2 = 123;
@@ -206,7 +233,6 @@ namespace Day4OOP
             //object name = 123; 
             //Console.WriteLine(name.GetType()); // System.Int32
 
-
             #endregion
 
             #region Example 
@@ -225,6 +251,7 @@ namespace Day4OOP
 
             ////employee.Gender = Enums.Gender.Male; 
             //employee.Gender = 0;
+            //employee.Gender = (Gender)20;
             //Console.WriteLine(employee.Gender);
 
             #endregion
